@@ -341,6 +341,13 @@
             object-fit: cover;
         }
 
+        /* MEMBERS FIXED ZOOM */
+        #members-grid .image-capsule img {
+            transform: scale(1);
+            object-fit: cover;
+            object-position: center;
+        }
+
         /* ========== AWARDS SECTION ========== */
         /* TO ADD MORE: Copy .award div and paste in .awards-list */
         .awards-list {
@@ -642,10 +649,10 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#members">Members</a></li>
                 <li><a href="#awards">Awards</a></li>
                 <li><a href="#media">Media</a></li>
                 <li><a href="#progress">Progress</a></li>
-                <li><a href="#members">Members</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -664,7 +671,7 @@
 
     <!-- ========== ABOUT SECTION ========== -->
     <!-- TO EXPAND: Copy .card div and paste before closing </div> of .card-grid -->
-    <section class="parallax-section" id="about">
+    <section class="parallax-section" id="member">
         <div class="parallax-bg" data-speed="0.3"></div>
         <div class="parallax-content" data-speed="0.6">
             <div class="section-header">
@@ -697,13 +704,99 @@
         </div>
     </section>
 
+    <section class="parallax-section" id="members">
+        <div class="parallax-bg" data-speed="0.3"></div>
+        <div class="parallax-content" data-speed="0.6">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">members</h2>
+            </div>
+            <div class="card-grid" id="members-grid">
+
+                <div class="card member-card" data-capsule-height="360" data-card-height="520">
+                <div class="image-capsule">
+                    <img src="pictures/Team Photos/atharvi.jpg" alt="Atharva">
+                </div>
+                <h3>Atharva Amradkar</h3>
+                <p>Lead Builder, Designer and part of driveteam, Atharva has 6 years of experience. He loves running, DECA and TSA.</p>
+            </div>
+                
+               <div class="card member-card" data-capsule-height="360" data-card-height="520">
+                    <div class="image-capsule">
+                        <img src="pictures/Team Photos/deyansh.jpg" alt="Team" data-pos-x="50" data-pos-y="50">
+                    </div>
+                    <h3>Deyansh Sisodia</h3>
+                    <p>Notebooker and competition scout. Deyansh has been doing robotics for 3 years, outside of robotics he does DECA, public speaking and precalc homework.</p>
+                </div>
+
+                <div class="card member-card" data-capsule-height="360" data-card-height="520">
+                    <div class="image-capsule">
+                        <img src="pictures/Team Photos/parth.jpg" alt="Team" data-pos-x="50" data-pos-y="50">
+                    </div>
+                    <h3>Parth Amradkar</h3>
+                    <p>Programmer, film and photography, Parth has 4 years of experience. He loves building autonomous racing drones, wrestling and photography.</p>
+                </div>
+
+                <div class="card member-card" data-capsule-height="360" data-card-height="520">
+                    <div class="image-capsule">
+                        <img src="pictures/Team Photos/tim.jpg" alt="Team" data-pos-x="50" data-pos-y="50">
+                    </div>
+                    <h3>Timothy An</h3>
+                    <p>Notebooker, competition scout and strategist, outside of robotics Timmy loves studying cool facts about warfare tactics and he also does TSA.</p>
+                </div>
+
+                <div class="card member-card" data-capsule-height="360" data-card-height="520">
+                    <div class="image-capsule">
+                        <img src="pictures/Team Photos/benji.jpg" alt="Team" data-pos-x="50" data-pos-y="50">
+                    </div>
+                    <h3>Benjamin Wu</h3>
+                    <p>Designer, builder and notebooker, Benjamin has 4 years of experience. He enjoys playing tennis in his freetime.</p>
+                </div>
+
+                <div class="card member-card" data-capsule-height="360" data-card-height="520">
+                    <div class="image-capsule">
+                        <img src="pictures/Team Photos/bgav.jpg" alt="Team" data-pos-x="50" data-pos-y="50">
+                    </div>
+                    <h3>Bhargav Narayan</h3>
+                    <p>Programmer and competition scout, Bhargav has been doing robotics for 5 years. Outside of robotics he enjoys working on his passion projects.</p>
+                </div>
+
+                <div class="card member-card" data-capsule-height="360" data-card-height="520">
+                    <div class="image-capsule">
+                        <img src="pictures/Team Photos/neel.jpg" alt="Team" data-pos-x="50" data-pos-y="50">
+                    </div>
+                    <h3>Neel Neverkar</h3>
+                    <p>Driver and builder, Neel has 5 years of experience. He loves playing tennis and working on passion projects.</p>
+                </div>
+                
+                <div class="card" data-capsule-height="360" data-card-height="520">
+                    <div class="image-capsule">
+                        <img src="pictures/photo14.png" alt="Team" data-pos-x="50" data-pos-y="50">
+                    </div>
+                    <h3>robot</h3>
+                    <p>builders build him, programmers beat him.</p>
+                </div>
+
+                <div class="card member-card" data-capsule-height="360" data-card-height="520">
+                    <div class="image-capsule">
+                        <img src="pictures/Team Photos/ishaan.jpg" alt="Team" data-pos-x="50" data-pos-y="50">
+                    </div>
+                    <h3>Ishaan Agrawal</h3>
+                    <p>Lead programmer, strategist and part of driveteam, Ishaan has 5 years of experience. He enjoys working on passion project and doing his schoolwork.</p>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
     <!-- ========== AWARDS SECTION ========== -->
     <!-- TO EXPAND: Copy .award div and paste before closing </div> of .awards-list -->
     <section class="parallax-section" id="awards">
         <div class="parallax-bg" data-speed="0.4"></div>
         <div class="parallax-content" data-speed="0.7">
             <div class="section-header">
-                <div class="section-number">02</div>
+                <div class="section-number">03</div>
                 <h2 class="section-title">awards</h2>
             </div>
             <div class="awards-list">
@@ -743,7 +836,7 @@
         <div class="parallax-bg" data-speed="0.35"></div>
         <div class="parallax-content" data-speed="0.65">
             <div class="section-header">
-                <div class="section-number">03</div>
+                <div class="section-number">04</div>
                 <h2 class="section-title">gallery</h2>
             </div>
             <div class="media-grid">
@@ -790,7 +883,7 @@
         <div class="parallax-bg" data-speed="0.45"></div>
         <div class="parallax-content" data-speed="0.75">
             <div class="section-header">
-                <div class="section-number">04</div>
+                <div class="section-number">05</div>
                 <h2 class="section-title">progress</h2>
             </div>
             <div class="timeline">
@@ -824,27 +917,7 @@
         </div>
     </section>
 
-    <section class="parallax-section" id="members">
-        <div class="parallax-bg" data-speed="0.3"></div>
-        <div class="parallax-content" data-speed="0.6">
-            <div class="section-header">
-                <div class="section-number">05</div>
-                <h2 class="section-title">members</h2>
-            </div>
-            <div class="card-grid">
-
-                <div class="card">
-                    <div class="image-capsule">
-                        <!-- TO ADD IMAGE:  -->
-                        <img src="pictures/photo13.jpg" alt="Team">
-                    </div>
-                    <h3>Sophmore + Freshmen Team</h3>
-                    <p>8 Members, 5 Schools</p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
+    
     
     <!-- ========== CONTACT SECTION ========== -->
     <!-- TO EXPAND: Copy .contact-card div and paste before closing </div> of .contact-grid -->
@@ -1029,6 +1102,20 @@
         });
 
         console.log('42824A Eternity - Interactive starfield engaged! ✨');
+
+        /* Make member cards taller for more image space */
+        /* Adjustable member card height from HTML */
+        document.querySelectorAll('#members-grid .member-card').forEach(card => {
+            const imageCapsule = card.querySelector('.image-capsule');
+            const customHeight = card.dataset.capsuleHeight || 400; // default image height
+            const minHeight = card.dataset.cardHeight || 500;       // default card height
+
+            if (imageCapsule) {
+                imageCapsule.style.height = `${customHeight}px`;
+            }
+            card.style.minHeight = `${minHeight}px`;
+        });
     </script>
+
 </body>
 </html>
