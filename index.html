@@ -8,7 +8,7 @@
         <link rel="icon" type="image/png" href="favicon.png" />
         <style>
             :root {
-                /* ========== COLOR VARIABLES - Easy to customize ========== */
+                /* color vars */
                 --primary-gold: #ad9f7b;
                 --primary-dark: #444c62;
                 --secondary-dark: #2a2f42;
@@ -463,7 +463,6 @@
                 text-align: left;
             }
 
-            /* Vertical line */
             .timeline::before {
                 content: "";
                 position: absolute;
@@ -478,7 +477,6 @@
                 );
             }
 
-            /* Individual timeline items */
             .timeline-item {
                 margin-bottom: 3rem;
                 position: relative;
@@ -501,7 +499,6 @@
                 box-shadow: 0 10px 40px rgba(173, 159, 123, 0.2);
             }
 
-            /* Diamond marker on timeline */
             .timeline-item::before {
                 content: "";
                 position: absolute;
@@ -520,7 +517,6 @@
                 box-shadow: 0 0 20px rgba(173, 159, 123, 0.8);
             }
 
-            /* Glow effect on hover */
             .timeline-item::after {
                 content: "";
                 position: absolute;
@@ -572,8 +568,6 @@
                 color: var(--text-primary);
             }
 
-            /* ========== CONTACT SECTION ========== */
-            /* TO ADD MORE: Copy .contact-card div and paste in .contact-grid */
             .contact-grid {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -607,7 +601,6 @@
                 font-size: 1.1rem;
             }
 
-            /* ========== FOOTER ========== */
             footer {
                 padding: 3rem 4rem;
                 text-align: center;
@@ -621,7 +614,6 @@
                 margin: 0.3rem 0;
             }
 
-            /* ========== BUTTON ========== */
             .btn {
                 display: inline-block;
                 padding: 1rem 3rem;
@@ -650,7 +642,6 @@
                 transform: translateY(-3px);
             }
 
-            /* ========== RESPONSIVE DESIGN ========== */
             @media (max-width: 768px) {
                 header {
                     width: 95%;
@@ -693,10 +684,8 @@
         </style>
     </head>
     <body>
-        <!-- Fixed starry background -->
         <div class="stars" id="stars"></div>
 
-        <!-- ========== FLOATING CENTERED GLASS NAV ========== -->
         <header id="navbar">
             <nav>
                 <div class="logo">
@@ -715,7 +704,6 @@
             </nav>
         </header>
 
-        <!-- ========== HERO SECTION ========== -->
         <section class="hero parallax-section" id="home">
             <div class="parallax-bg" data-speed="0.5"></div>
             <div class="parallax-content" data-speed="0.8">
@@ -726,8 +714,6 @@
             </div>
         </section>
 
-        <!-- ========== ABOUT SECTION ========== -->
-        <!-- TO EXPAND: Copy .card div and paste before closing </div> of .card-grid -->
         <section class="parallax-section" id="about">
             <div class="parallax-bg" data-speed="0.3"></div>
             <div class="parallax-content" data-speed="0.6">
@@ -738,7 +724,6 @@
                 <div class="card-grid">
                     <div class="card">
                         <div class="image-capsule">
-                            <!-- TO ADD IMAGE:  -->
                             <img src="pictures/photo13.jpg" alt="Team" />
                         </div>
                         <h3>Sophmore Team</h3>
@@ -965,8 +950,6 @@
             </div>
         </section>
 
-        <!-- ========== AWARDS SECTION ========== -->
-        <!-- TO EXPAND: Copy .award div and paste before closing </div> of .awards-list -->
         <section class="parallax-section" id="awards">
             <div class="parallax-bg" data-speed="0.4"></div>
             <div class="parallax-content" data-speed="0.7">
@@ -1010,13 +993,10 @@
                             Innovate award for our double park mech.
                         </p>
                     </div>
-                    <!-- TO ADD MORE: Copy from <div class="award"> to </div> and paste here -->
                 </div>
             </div>
         </section>
 
-        <!-- ========== MEDIA GALLERY ========== -->
-        <!-- TO EXPAND: Copy .media-item div and paste before closing </div> of .media-grid -->
         <section class="parallax-section" id="media">
             <div class="parallax-bg" data-speed="0.35"></div>
             <div class="parallax-content" data-speed="0.65">
@@ -1061,8 +1041,6 @@
             </div>
         </section>
 
-        <!-- ========== PROGRESS TIMELINE ========== -->
-        <!-- TO EXPAND: Copy .timeline-item div and paste before closing </div> of .timeline -->
         <section class="parallax-section" id="progress">
             <div class="parallax-bg" data-speed="0.45"></div>
             <div class="parallax-content" data-speed="0.75">
@@ -1149,14 +1127,10 @@
                             cad models for future sigs and state competition.
                         </p>
                     </div>
-
-                    <!-- TO ADD MORE: Copy from <div class="timeline-item"> to </div> and paste here -->
                 </div>
             </div>
         </section>
 
-        <!-- ========== CONTACT SECTION ========== -->
-        <!-- TO EXPAND: Copy .contact-card div and paste before closing </div> of .contact-grid -->
         <section class="parallax-section" id="contact">
             <div class="parallax-bg" data-speed="0.4"></div>
             <div class="parallax-content" data-speed="0.7">
@@ -1167,31 +1141,22 @@
                 <div class="contact-grid">
                     <div class="contact-card">
                         <h4>email</h4>
-                        <p>null</p>
+                        <p>eternityrobotics@gmail.com</p>
                     </div>
+                    <a href="https://www.instagram.com/42824a_eternity/">
+                        <div class="contact-card">
+                            <h4>click for instagram</h4>
+                        </div>
+                    </a>
                     <div class="contact-card">
-                        <h4>insta</h4>
-                        <p>null</p>
-                    </div>
-                    <div class="contact-card">
-                        <h4>location</h4>
-                        <p>Sammamish, Washington</p>
+                        <h4>based in</h4>
+                        <p>sammamish, washington</p>
                     </div>
                     <!-- TO ADD MORE: Copy from <div class="contact-card"> to </div> and paste here -->
                 </div>
-                <p
-                    style="
-                        text-align: center;
-                        margin-top: 3rem;
-                        color: var(--text-secondary);
-                    "
-                >
-                    null
-                </p>
             </div>
         </section>
 
-        <!-- ========== FOOTER ========== -->
         <footer>
             <p>© 2025 Eternity Robotics | 42824A</p>
             <p>Sammamish, WA | VEX Robotics Competition</p>
@@ -1199,7 +1164,6 @@
         </footer>
 
         <script>
-            // ========== GENERATE STARRY BACKGROUND ==========
             const starsContainer = document.getElementById("stars");
             const stars = [];
 
@@ -1246,7 +1210,6 @@
 
             starsContainer.appendChild(fragment);
 
-            // ========== SMOOTH CURSOR INTERACTION ==========
             let mouseX = window.innerWidth / 2;
             let mouseY = window.innerHeight / 2;
             let isMoving = false;
@@ -1310,7 +1273,6 @@
 
             updateStars();
 
-            // ========== HIDE NAV ON SCROLL DOWN, SHOW ON SCROLL UP ==========
             let lastScroll = 0;
             const navbar = document.getElementById("navbar");
 
@@ -1326,16 +1288,13 @@
 
                 lastScroll = currentScroll;
 
-                // ========== PARALLAX SCROLLING EFFECT ==========
                 const scrolled = window.pageYOffset;
 
-                // Move background layers slower (creates depth effect)
                 document.querySelectorAll(".parallax-bg").forEach((bg) => {
                     const speed = parseFloat(bg.dataset.speed);
                     bg.style.transform = `translateY(${scrolled * speed}px)`;
                 });
 
-                // Move content layers at different speeds
                 document
                     .querySelectorAll(".parallax-content")
                     .forEach((content) => {
@@ -1346,7 +1305,6 @@
                     });
             });
 
-            // ========== SMOOTH SCROLL NAVIGATION ==========
             document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
                 anchor.addEventListener("click", function (e) {
                     e.preventDefault();
@@ -1362,8 +1320,6 @@
                 });
             });
 
-            /* Make member cards taller for more image space */
-            /* Adjustable member card height from HTML */
             document
                 .querySelectorAll("#members-grid .member-card")
                 .forEach((card) => {
