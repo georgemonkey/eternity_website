@@ -94,6 +94,73 @@
                     0 0 30px rgba(173, 159, 123, 0.2);
                 border-color: rgba(173, 159, 123, 0.6);
             }
+            /* ========== MEDIA DRIVE BUTTON ========== */
+            .media-drive-btn {
+                position: fixed;
+                top: 2rem;
+                right: 2rem;
+                z-index: 1001;
+                padding: 1.2rem 2.5rem;
+                background: linear-gradient(
+                    135deg,
+                    var(--primary-gold),
+                    #8a7f67
+                );
+                color: var(--primary-dark);
+                text-decoration: none;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 0.9rem;
+                border: 2px solid var(--primary-gold);
+                border-radius: 50px;
+                box-shadow:
+                    0 8px 32px rgba(173, 159, 123, 0.4),
+                    0 0 20px rgba(173, 159, 123, 0.3);
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                animation:
+                    fadeInDown 1s ease-out,
+                    pulse 2s ease-in-out infinite;
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+            }
+
+            .media-drive-btn::before {
+                content: "";
+                font-size: 1.2rem;
+            }
+
+            .media-drive-btn:hover {
+                transform: translateY(-5px) scale(1.05);
+                box-shadow:
+                    0 15px 50px rgba(173, 159, 123, 0.6),
+                    0 0 40px rgba(173, 159, 123, 0.5);
+                background: linear-gradient(
+                    135deg,
+                    #c4b896,
+                    var(--primary-gold)
+                );
+            }
+
+            .media-drive-btn.hidden {
+                transform: translateY(-150%);
+                opacity: 0;
+            }
+
+            @keyframes pulse {
+                0%,
+                100% {
+                    box-shadow:
+                        0 8px 32px rgba(173, 159, 123, 0.4),
+                        0 0 20px rgba(173, 159, 123, 0.3);
+                }
+                50% {
+                    box-shadow:
+                        0 8px 32px rgba(173, 159, 123, 0.6),
+                        0 0 30px rgba(173, 159, 123, 0.5);
+                }
+            }
 
             /* Hide nav when scrolling down */
             header.hidden {
@@ -645,63 +712,83 @@
                 transform: translateY(-3px);
             }
 
-            
-              @media (max-width: 768px) {
-    header {
-        width: 95%;
-        padding: 0.8rem 1rem;
-    }
+            @media (max-width: 768px) {
+                header {
+                    width: 95%;
+                    padding: 0.8rem 1rem;
+                }
 
-    nav {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
+                nav {
+                    flex-direction: column;
+                    gap: 0.8rem;
+                }
 
-    .logo {
-        font-size: 1rem;
-        gap: 0.5rem;
-    }
+                .logo {
+                    font-size: 1rem;
+                    gap: 0.5rem;
+                }
 
-    .nav-links {
-        gap: 1rem;
-        font-size: 0.6rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-    }
+                .nav-links {
+                    gap: 1rem;
+                    font-size: 0.6rem;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    width: 100%;
+                }
 
-    .nav-links li {
-        flex-shrink: 0;
-    }
+                .nav-links li {
+                    flex-shrink: 0;
+                }
 
-    .hero h1 {
-        font-size: 3.5rem;
-    }
+                .hero h1 {
+                    font-size: 3.5rem;
+                }
 
-    .section-header {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
+                .section-header {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                }
 
-    .card-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
+                .card-grid,
+                .contact-grid {
+                    grid-template-columns: 1fr;
+                }
 
-    .parallax-section {
-        margin: 4rem 0;
-    }
+                .parallax-section {
+                    margin: 4rem 0;
+                }
 
-    .timeline {
-        padding-left: 2rem;
-    }
-}
+                .timeline {
+                    padding-left: 2rem;
+                }
+            }
 
+            .media-drive-btn {
+                top: auto;
+                bottom: 2rem;
+                right: 1rem;
+                left: 1rem;
+                padding: 1rem 1.5rem;
+                font-size: 0.75rem;
+                justify-content: center;
+            }
+
+            .media-drive-btn.hidden {
+                transform: translateY(150%);
+            }
         </style>
     </head>
     <body>
         <div class="stars" id="stars"></div>
+        <a
+            href="https://drive.google.com/drive/folders/1wVoYalNKkAYTM3hW1XW4SYNo_dR1KmOD?usp=sharing"
+            target="_blank"
+            class="media-drive-btn"
+            id="mediaDriveBtn"
+        >
+            photo gallery
+        </a>
 
         <header id="navbar">
             <nav>
@@ -764,10 +851,10 @@
                     </div>
                     <div class="card">
                         <div class="image-capsule">
-                            <img src="pictures/photo19.jpg" alt="Team" />
+                            <img src="pictures/photo20.jpg" alt="Team" />
                         </div>
-                        <h3>Robot</h3>
-                        <p>We're on our third iteration this season.</p>
+                        <h3>Bot</h3>
+                        <p>We're on our fourth iteration this season.</p>
                     </div>
                 </div>
             </div>
@@ -1003,30 +1090,53 @@
                         </p>
                     </div>
                     <div class="award">
-                        <h4>Amaze Award</h4>
+                        <h4>Amaze Award - Ignite Showdown</h4>
                         <div class="award-date">November 2024</div>
-                        <p>At Ignite Showdown we received the Amaze award</p>
                     </div>
                     <div class="award">
-                        <h4>Skills Champion</h4>
+                        <h4>Skills Champion - Ellensburg</h4>
                         <div class="award-date">December 2024</div>
+                    </div>
+                    <div class="award">
+                        <h4>Sportsmanship Award - Regional</h4>
+                        <div class="award-date">March 2025</div>
+                    </div>
+
+                    <div class="award">
+                        <h4>Worlds Qualification</h4>
+                        <div class="award-date">March 2025</div>
                         <p>
-                            At an Ellensburgs' tournament we placed 1st in the
-                            skills challenge
+                            We qualified for Worlds at Regionals by a double
+                            skills qual.
                         </p>
                     </div>
+
                     <div class="award">
-                        <h4>Sportsmanship Award</h4>
-                        <div class="award-date">March 2025</div>
-                        <p>At states we received the Sportsmanship award</p>
-                    </div>
-                    <div class="award">
-                        <h4>Innovate Award</h4>
+                        <h4>Tournament Finalists - Local(ran like a sig)</h4>
                         <div class="award-date">November 2025</div>
                         <p>
-                            At Ignites Pushback Playoffs we received the
-                            Innovate award for our double park mech.
+                            At a local tournament that was ran like a signature
+                            event we received tournament finalists. This
+                            qualified us to states in Pushback.
                         </p>
+                    </div>
+                    <div class="award">
+                        <h4>Innovate Award - Local</h4>
+                        <div class="award-date">November 2025</div>
+                        <p>We received this award for our double park mech.</p>
+                    </div>
+                    <div class="award">
+                        <h4>Tournament Finalist - Ignite Signature</h4>
+                        <div class="award-date">January 2026</div>
+                    </div>
+                    <div class="award">
+                        <h4>Tournament Champion - Spartan Games</h4>
+                        <div class="award-date">January 2026</div>
+                    </div>
+
+                    <div class="award">
+                        <h4>Design Award - Spartan Games</h4>
+                        <div class="award-date">January 2026</div>
                     </div>
                 </div>
             </div>
@@ -1160,6 +1270,29 @@
                             We participated in local competitions, we made it to
                             finals both times and sold. We discussed rebuild +
                             cad models for future sigs and state competition.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Rebuild</h4>
+                        <div class="timeline-date">December 2025</div>
+                        <p>
+                            We had a complete rebuild of our robot while using
+                            our old bot as a practice bot for our driver to
+                            continue practicing his skills. Additionally we were
+                            preparing for the Ignite Signature event.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Signature Events</h4>
+                        <div class="timeline-date">January 2025</div>
+                        <p>
+                            We particpated in the Ignite Signature event (9-2)
+                            and made it to glacial div finalists (1-2). We also
+                            participated in the Pikes Peak Signature event. This
+                            month we spent most of our time tuning autos and
+                            preparing for weekend long signature events.
                         </p>
                     </div>
                 </div>
@@ -1310,6 +1443,7 @@
 
             let lastScroll = 0;
             const navbar = document.getElementById("navbar");
+            const mediaDriveBtn = document.getElementById("mediaDriveBtn");
 
             window.addEventListener("scroll", () => {
                 const currentScroll = window.pageYOffset;
@@ -1317,8 +1451,10 @@
                 // Hide navbar when scrolling down, show when scrolling up
                 if (currentScroll > lastScroll && currentScroll > 100) {
                     navbar.classList.add("hidden");
+                    mediaDriveBtn.classList.add("hidden");
                 } else {
                     navbar.classList.remove("hidden");
+                    mediaDriveBtn.classList.remove("hidden");
                 }
 
                 lastScroll = currentScroll;
